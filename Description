@@ -1,0 +1,16 @@
+Our Lakehouse contains 3 schema for delta tables:
+1) bronze_road
+2) silver_road
+3) gold_road
+And file storage which is relalized for using min resources for this test task in Databricks using Volume, but we can extend this solution using S3 or other file storages.
+this file storage has mutiple directories in every we contain files for every table (if we want to update it continiously)
+I realized logic only for 2 tables.
+In bronze_road there are raw data from CSV files.
+In silver layer we try to convert data into format, remove spaces etc. 
+"""Because I didnt have additional requirements it is hard to understand in which format data we need. 
+So I do minimal clearing data."""
+The final result for this layer: we have fact table (with description instead of key).
+"""It can be realizied also using UNPIVOT for FACT table and after joining with dim table again PIVOT result. But in this case 
+using multiple join instead of rotation operation"""
+The gold layer will be contained aggregational data. 
+Marts are represented as materialized views. M_IMPACT_VEHICLE contains data how much accidents were every year in one age group for every sex and with different impact on vehicle
