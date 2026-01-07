@@ -14,3 +14,7 @@ The final result for this layer: we have fact table (with description instead of
 using multiple join instead of rotation operation"""
 The gold layer will be contained aggregational data. 
 Marts are represented as materialized views. M_IMPACT_VEHICLE contains data how much accidents were every year in one age group for every sex and with different impact on vehicle
+
+What can add?
+Comments or columns allows us clearly understand what represent every columns.
+Constraints. Although they dont control data quality, they allows us to understand which data we need.
